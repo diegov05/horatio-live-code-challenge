@@ -29,10 +29,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col justify-center items-center`}
       >
-        <header className="flex justify-center items-center p-8">
-          <NavBar />
-        </header>
-        {children}
+        <>
+          <header className="flex justify-center items-center p-8">
+            <NavBar />
+          </header>
+          {children}
+        </>
       </body>
     </html>
   );
