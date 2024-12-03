@@ -1,11 +1,8 @@
 import {
   NavigationMenu,
-  NavigationMenuContent,
   NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuList,
   NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 import Link from "next/link"
 
@@ -15,42 +12,24 @@ export default function NavBar() {
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Logo</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <Link href="/" legacyBehavior passHref>
-              Homepage
-            </Link>
-          </NavigationMenuContent>
+          <Link href="/" legacyBehavior passHref>
+            <NavigationMenuTrigger>Logo</NavigationMenuTrigger>
+          </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Updates</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <Link href="/updates" legacyBehavior passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                Updates
-              </NavigationMenuLink>
-            </Link>
-          </NavigationMenuContent>
+          <Link href="/updates" legacyBehavior passHref>
+            <NavigationMenuTrigger>Updates</NavigationMenuTrigger>
+          </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>FAQ</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <Link href="/faq" legacyBehavior passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                FAQ
-              </NavigationMenuLink>
-            </Link>
-          </NavigationMenuContent>
+          <Link href="/faq" legacyBehavior passHref>
+            <NavigationMenuTrigger>FAQ</NavigationMenuTrigger>
+          </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>Contact</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <Link href="/contact" legacyBehavior passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                Contact
-              </NavigationMenuLink>
-            </Link>
-          </NavigationMenuContent>
+          <Link href="/contact" legacyBehavior passHref>
+            <NavigationMenuTrigger>Contact</NavigationMenuTrigger>
+          </Link>
         </NavigationMenuItem>
       </NavigationMenuList>
     </NavigationMenu>
